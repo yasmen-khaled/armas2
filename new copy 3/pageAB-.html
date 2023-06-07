@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+
+   
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>قائمة المتبرعين</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+
+<script>
+
+function searchDonors() {
+  // Get input value and convert to lowercase for case-insensitive search
+  var inputValue = document.getElementById("searchInput").value.toLowerCase();
+  
+  // Get list of card elements
+  var cardList = document.getElementsByClassName("card");
+  
+  // Loop through cards and hide/show based on search input
+  for (var i = 0; i < cardList.length; i++) {
+    var donorName = cardList[i].getElementsByTagName("h2")[0].innerHTML.toLowerCase();
+    if (donorName.indexOf(inputValue) > -1) {
+      cardList[i].style.display = "";
+    } else {
+      cardList[i].style.display = "none";
+    }
+  }
+}
+
+
+
+function changeStyle(styleName) {
+   var styleSheets = document.getElementsByTagName('link');
+   var styleFound = false;
+   for (var i = 0; i < styleSheets.length; i++) {
+      if (styleSheets[i].href.includes(styleName)) {
+         styleSheets[i].disabled = false;
+         styleFound = true;
+      }      else {
+         styleSheets[i].disabled = true;
+      }
+   }
+   if (!styleFound) {
+      var link = document.createElement('link');
+      link.href = styleName;
+      link.type = 'text/css';
+      link.rel = 'style2';
+      document.head.appendChild(link);
+   }
+}
+
+
+
+
+</script>
+
+<style>
+
+
+   
+button {
+                                 background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+                                 }
+                                 
+                                 button:hover {
+                                   transform: scale(1.1);
+                         box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+                                 }
+                                 
+                                 .buttonContainer {
+                                   display: flex;
+                                   justify-content:center;
+                                   align-items: center;
+                                   height: 50px;
+                                 }
+                                  
+.top-bar {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #47988b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  z-index: 9999; /* تحديد z-index بقيمة عالية */
+}
+
+.row {
+  position: relative;
+  z-index: 1; /* تحديد z-indexللصف الذي يحوي الايقونة بقيمة أقل من الشريط */
+}
+
+.row img {
+  z-index: 0; /* تحديد z-index للصورة بقيمة أقل */
+}
+
+                                 
+
+</style>
+    
+
+
+
+
+<div class="top-bar">
+   <a link rel="" type="" href="https://www.facebook.com/profile.php?id=100089577814064">
+   <img src="img/collage logo.png" alt="Sponsor Logo 1" width="130" height="130">
+ </a>
+ <a  link rel="" type="" href="https://www.facebook.com/CETZ.EDU.LY">
+   <img src="img/armas.png" alt="Sponsor Logo 2" width="150" height="150">
+ </a>
+ <button class="print-button" onclick="window.print()">طباعة</button>
+            
+      <button>
+         
+         <a href="pagedesgin.html"> تغير الشكل </a>
+         
+         
+      </button>
+ 
+ </div>
+ 
+
+
+ 
+ 
+
+
+
+   </head>
+   <!-- body -->
+
+   <body class="main-layout">
+      
+
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         
+      <div class="testimonial">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>BLOOD DONAITERS </h2>
+                     <p>متبرعين فصيلة الدم  </p>
+                  </div>
+               </div>
+            </div>
+
+           
+      <!--    AB-   هنا  قسم المتبرعين    -->
+
+
+
+    
+
+      
+      <div class="search-container">
+         
+         
+         <div class="search-box">
+           <input type="text" id="searchInput" placeholder="Search by name...">
+           <button onclick="searchDonors()">Search</button>
+         </div>
+       </div>
+
+
+
+    
+     <!--نهاية قسم المتبرعين -->
+
+
+
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <i><img src="images/tes.jpg" alt="#"/></i>
+                                          <h4>JCKOLO</h4>
+                                          <span>(It is a long )</span>
+                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6 margin_boot">
+                                       <div class="test_box">
+                                          <i><img src="images/tes1.jpg" alt="#"/></i>
+                                          <h4>ROCOYO</h4>
+                                          <span>(It is a long )</span>
+                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                                       </div>
+                                 </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end testimonial -->
+      </div>
+      <!--  footer -->
+      <footer id="contact">
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="titlepage">
+                        <h2>Contact Us</h2>
+                     </div>
+                  </div>
+                  <div class="col-md-8">
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Locatins</li>
+                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a> +71 9087654321</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>demo@gmail.com</li>
+                     </ul>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>Copyright 2019 All Right Reserved By <a href="https://html.design/"> Free  html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>

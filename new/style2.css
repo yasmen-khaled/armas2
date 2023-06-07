@@ -1,0 +1,60 @@
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+ }
+ 
+ .card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    box-shadow: none;
+    border: 10%;
+    width: 100px;
+    height: 90px;
+    margin: 10px;
+ 
+    font-weight: 600;
+      font-size: 20px;
+      text-align: right;
+      color: #000000;
+      padding-bottom: 15px;
+ }
+ 
+ h3 {
+    margin-top: 0;
+    font-size: 15px;
+ }
+ 
+ p {
+    margin-bottom: 5px;
+    font-size: 18px;
+   
+ }
+ 
+ 
+ .print-button {
+    position: fixed;
+ 
+ 
+    z-index: 2;
+ }
+ 
+ nav a:nth-child(2) {
+   background-color: #fff;
+   color: #333;
+   padding: 10px 20px;
+   border-radius: 5px;
+   text-decoration: none;
+   transition: all 0.3s ease;
+ }
+ 
+ nav a:nth-child(2):hover {
+   background-color: #333;
+   color: #fff;
+ }
+
+ 
